@@ -1,0 +1,64 @@
+<div class="container" *ngIf="dataLoaded">
+  <div>
+    Welcome <b>{{name}}</b>.<br /> You have posted <b>{{postLength}}</b> time(s) and commented
+    <b>{{commentLength}}</b> time(s).
+    You can check your post and comment history below.
+  </div>
+  <hr />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+  <h1>User Activity</h1>
+  <div class="main-container">
+      <div class="card purple border" *ngFor="let post of posts;index as i">
+        <a type="button" (click)="viewPost(post.postId)" class="desc" style="text-decoration: none; color:black;">
+          <h2>{{post.postName}}</h2>
+        </a>
+          <p> <span [innerHTML]="post.description"  class="overflow"> {{post.description}}..</span></p> <br> 
+          <p class="bold">posted on {{post.localDateTime.substring(0,10)}} at
+            {{post.localDateTime.substring(11,19)}}
+          </p>
+        
+      </div>
+
+      <!-- <div class="card yellow">
+          <h2>{{gameNames[0]}}</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt optio laborum vitae eveniet suscipit repellat sit possimus iusto veritatis earum qui excepturi ullam provident quas, dolorum libero dolor cumque aperiam?</p>
+      </div>
+      <div class="card green">
+          <h2>Card Heading Title</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt optio laborum vitae eveniet suscipit repellat sit possimus iusto veritatis earum qui excepturi ullam provident quas, dolorum libero dolor cumque aperiam?</p>
+      </div>
+      <div class="card purple border">
+          <h2>Card Heading Title</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt optio laborum vitae eveniet suscipit repellat sit possimus iusto veritatis earum qui excepturi ullam provident quas, dolorum libero dolor cumque aperiam?</p>
+      </div>
+      <div class="card yellow border">
+          <h2>Card Heading Title</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt optio laborum vitae eveniet suscipit repellat sit possimus iusto veritatis earum qui excepturi ullam provident quas, dolorum libero dolor cumque aperiam?</p>
+      </div>
+      <div class="card green border">
+          <h2>Card Heading Title</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt optio laborum vitae eveniet suscipit repellat sit possimus iusto veritatis earum qui excepturi ullam provident quas, dolorum libero dolor cumque aperiam?</p>
+      </div> -->
+  </div>
