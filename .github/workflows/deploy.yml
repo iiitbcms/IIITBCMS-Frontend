@@ -1,7 +1,7 @@
 name: Manual deployment
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   deploy:
