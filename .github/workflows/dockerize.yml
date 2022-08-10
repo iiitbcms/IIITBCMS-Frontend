@@ -32,7 +32,7 @@ jobs:
             context: ./
             file: ./Dockerfile
             push: true
-            tags: akshathkaushal7/spe-project-frontend:latest
+            tags: iiitbcms/iiitbcms-frontend:latest
 
       - name: Image Digest
         run: echo ${{ steps.docker_build.outputs.digest }}
