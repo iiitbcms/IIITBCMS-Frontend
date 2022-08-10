@@ -1,18 +1,18 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7c905f7b-4914-454c-9339-f1cec6bfb4be/deploy-status)](https://app.netlify.com/sites/iiitbcms/deploys)
 
-![Dockerize](https://github.com/akshathkaushal/IIITB-CMS-Frontend/actions/workflows/dockerize.yml/badge.svg)
-![Manual deployment](https://github.com/akshathkaushal/IIITB-CMS-Frontend/actions/workflows/deploy.yml/badge.svg)
+![Dockerize](https://github.com/iiitbcms/IIITBCMS-Frontend/actions/workflows/dockerize.yml/badge.svg)
+![Manual deployment](https://github.com/iiitbcms/IIITBCMS-Frontend/actions/workflows/deploy.yml/badge.svg)
 
-![Repo Size](https://img.shields.io/github/repo-size/akshathkaushal/IIITB-CMS-Frontend) 
-![Commits](https://img.shields.io/github/commit-activity/w/akshathkaushal/IIITB-CMS-Frontend)
-![Last Commit](https://img.shields.io/github/last-commit/akshathkaushal/IIITB-CMS-Frontend/master)
-![Open Issues](https://img.shields.io/github/issues-raw/akshathkaushal/IIITB-CMS-Frontend)
-![Pull Requests](https://img.shields.io/github/issues-pr-raw/akshathkaushal/IIITB-CMS-Frontend)
-![visitor badge](https://visitor-badge.glitch.me/badge?page_id=akshathkaushal.IIITB-CMS-Frontend&left_text=Visitors)
+![Repo Size](https://img.shields.io/github/repo-size/iiitbcms/IIITBCMS-Frontend) 
+![Commits](https://img.shields.io/github/commit-activity/w/iiitbcms/IIITBCMS-Frontend)
+![Last Commit](https://img.shields.io/github/last-commit/iiitbcms/IIITBCMS-Frontend/main)
+![Open Issues](https://img.shields.io/github/issues-raw/iiitbcms/IIITBCMS-Frontend)
+![Pull Requests](https://img.shields.io/github/issues-pr-raw/iiitbcms/IIITBCMS-Frontend)
+![visitor badge](https://visitor-badge.glitch.me/badge?page_id=iiitbcms.IIITBCMS-Frontend&left_text=Visitors)
 
-![Forks](https://img.shields.io/github/forks/akshathkaushal/IIITB-CMS-Frontend?style=social)
-![Stars](https://img.shields.io/github/stars/akshathkaushal/IIITB-CMS-Frontend?style=social)
-![Watchers](https://img.shields.io/github/watchers/akshathkaushal/IIITB-CMS-Frontend?style=social)
+![Forks](https://img.shields.io/github/forks/iiitbcms/IIITBCMS-Frontend?style=social)
+![Stars](https://img.shields.io/github/stars/iiitbcms/IIITBCMS-Frontend?style=social)
+![Watchers](https://img.shields.io/github/watchers/iiitbcms/IIITBCMS-Frontend?style=social)
 
 # IIITB COMPLAINT MANAGEMENT SYSTEM
 
