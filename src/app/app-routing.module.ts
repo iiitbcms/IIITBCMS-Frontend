@@ -16,8 +16,8 @@ import { PostTileComponent } from './shared/post-tile/post-tile.component';
 import { ViewPostComponent } from './view-post/view-post.component';
 // PostTileComponent ViewPostComponent
 const routes: Routes = [
-  // {path: '', component: HomeComponent},
-  {path: 'student', component: StudHomePageComponent},
+  {path: '', component: HomeComponent},
+  // {path: 'student', component: StudHomePageComponent},
   {path: 'sign-up', component: SignupComponent },
   {path: 'login', component: LoginComponent },
   {path: 'create-post', component: CreatePostComponent, canActivate: [AuthGuard]},

@@ -31,6 +31,10 @@ import { StudHomePageComponent } from './home/stud-home-page/stud-home-page.comp
 import { CommHomePageComponent } from './home/comm-home-page/comm-home-page.component';
 import { AdminHomePageComponent } from './home/admin-home-page/admin-home-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { SignupModal } from './auth/signup/signup-modal/signup-modal.component';
+import { LoginModalComponent } from './auth/login/login-modal/login-modal.component';
+import { PostCardComponent } from './post-card/post-card.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +56,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     CommHomePageComponent,
     AdminHomePageComponent,
     NavbarComponent,
+    FooterComponent,
+    SignupModal,
+    LoginModalComponent,
+    PostCardComponent,
   ],
   imports: [
     BrowserModule,
