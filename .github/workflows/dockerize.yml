@@ -2,9 +2,9 @@ name: Dockerization
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build:
@@ -32,7 +32,7 @@ jobs:
             context: ./
             file: ./Dockerfile
             push: true
-            tags: iiitbcms/iiitbcms-frontend:latest
+            tags: akshathkaushal7/spe-project-frontend:latest
 
       - name: Image Digest
         run: echo ${{ steps.docker_build.outputs.digest }}
