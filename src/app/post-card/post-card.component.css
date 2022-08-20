@@ -1,0 +1,40 @@
+.mycard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.cardFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #f0f0ff;
+  border-radius: 5px;
+}
+
+.buy {
+  height: 40px;
+  width: 97%;
+  border-radius: 5px;
+  background-color: #1f2432;
+  color: white;
+  transition: 0.7s;
+
+}
+
+.buy:hover {
+  transition: 0.7s;
+  background-color: #f0f0ff;
+  color: #1f2432;
+}

@@ -1,0 +1,111 @@
+.mycard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex:1;
+  width:600px;
+  /* overflow:hidden; */
+  background-color: white;
+  background: linear-gradient(to right bottom ,rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  border-radius: 2rem;
+}
+
+.overflow
+{
+  display: inline-block;
+  max-width: 100ch;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.content{
+  background: linear-gradient(to right top, #2bdee4, #1a63a7);
+}
+
+.cardheader{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.left{
+  position:relative;
+  left:-100px;
+}
+
+.cardFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* background-color: #f0f0ff; */
+  border-radius: 5px;
+}
+
+.buy {
+  height: 40px;
+  /* width: 97%; */
+  border-radius: 5px;
+  background-color: #1a63a7;
+  color: white;
+  transition: 0.7s;
+
+}
+
+.buy:hover {
+  transition: 0.7s;
+  background-color: #f0f0ff;
+  color: #1a63a7;
+}
+
+.content{
+  border:solid;
+}
+
+.myrow{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+.heading,.topbar{
+  background-color: #1a63a7;
+  color: #ffc600;
+  font-family: 'Roboto', sans-serif;
+}
+
+.top{
+  background-color: #ffc600;
+  width:40%;
+}
+
+.navtext{
+  /* color:#ffc600; */
+  color:#1a64a8;
+  font-weight: 900;
+  font-family: 'Roboto', sans-serif;
+  font-size:2rem;
+}
+
+.navbar{
+  /* background-color: #1a64a8; */
+  background-color: white;
+}
+
+.heading{
+  font-weight: 900;
+  font-size:3rem;
+  text-align: center;
+}

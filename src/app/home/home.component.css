@@ -1,43 +1,121 @@
-.post{
-    --post-line-color: #ccc;
-    border: 1px solid #ccc;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    overflow: hidden;
-    background-color: rgba(255,255,255,0.8);
-    color: #878A8C;
-    position: relative;
-    border-radius: 4px;
-    padding:5px;
-    margin-right: 50%;;
-  }
-  
-  .btnCommments{
-    border-radius: 2px solid;
-    color: #878A8C;
-    opacity: 1;
-  }
-  
-  .btnCommments:hover{
-    opacity: 0.65;
-    cursor: pointer;
-  }
-  
-  .post-title{
-    font-size: 28px;
-    font-weight: bold;
-    opacity: 1;
-  }
-  
-  .posturl, .postname{
-    color: black;
-  }
-  
-  .subreddit-text{
-    font-weight: bold;
-  }
-  
-  .post-text{
-    margin-top: 10px;
-  }
-  
+  .banner {
+    position:relative;
+    width:100%;
+    height:710px;
+    overflow:hidden;
+    margin:auto;
+    text-align:center;
+    font-size:1.8em;line-height:90px;color:#fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ }
+ .banner:before {
+    content:'';
+    position:absolute;
+    top:0; left:-25%; bottom:4px;
+    width: 150%;
+    background-color: #1a64a8;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    border:4px solid #ffc600;
+    border-top:0;
+    z-index:-1;
+ }
+
+ .halfcontainer,.imagecontainer{
+  flex:1;
+  margin: 5px;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+}
+
+.myflex{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.cards{
+  width:50%;
+  flex-direction: column;
+}
+
+.registerCards{
+  width:50%;
+  flex-direction: row;
+}
+
+.card{
+  flex-direction: row;
+  border:none;
+  justify-content: center;
+  align-items: center;
+}
+
+.borders{
+  border:solid;
+  box-shadow: 5px 5px 5px #1a64a8;
+  width:80%;
+}
+
+.white{
+  color: white;
+}
+
+.yellow{
+  color:#ffc600
+}
+
+.yellow,.white{
+  font-family: 'Roboto', sans-serif;
+  font-size:90px;
+}
+
+.navtext{
+  /* color:#ffc600; */
+  color:#1a64a8;
+  font-weight: 900;
+  font-family: 'Roboto', sans-serif;
+  font-size:2rem;
+}
+
+.text{
+  font-family: 'Roboto', sans-serif;
+  color:#1a64a8;
+}
+
+.yellowline{
+  width: 30%;
+  border-bottom:5px solid #ffc600;
+}
+
+.smaller{
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+.navbar{
+  /* background-color: #1a64a8; */
+  background-color: white;
+}
+
+.mybutton {
+  background-color:#1a64a8;
+  text-align: center;
+  color: #fff;
+  border:2px solid white;
+  border-radius:10px;
+  /* padding:10px; */
+  /* min-height:20px; */
+  min-width: 100px;
+  transition: 0.7s;
+}
+
+.mybutton:hover {
+  background-color:#ffc600;
+  transition: 0.7s;
+}

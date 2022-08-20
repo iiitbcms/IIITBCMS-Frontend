@@ -1,1 +1,136 @@
-<p>comm-home-page works!</p>
+<section class="wrapper">
+<body ng-app="blogApp">
+
+    <div ng-controller="BlogController as blog">
+
+      <nav class="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand navtext">
+            <img src="../../assets/IIIT_Bangalore_Logo.svg" alt="" width="60"  class="d-inline-block align-text-top">
+            IIITB CMS</a>
+          <ul class="nav justify-content-end d-flex" id="myNav">
+            <li class="nav-item m-1">
+              <!-- <a class="nav-link mybutton text m-1" href="#" (click)="register()">Login</a> -->
+              <button type="button" class="buy" (click)="navigateTo(1)">See All Posts</button>
+            </li>
+            <li class="nav-item m-1">
+              <!-- <a class="nav-link mybutton text m-1" href="#" (click)="signup()">Signup</a> -->
+              <button type="button" class="buy" (click)="navigateTo(2)">Add New Post</button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      </div>
+
+      <div class="content">
+        <div class="container">
+          <div class="myrow">
+            <div *ngFor="let post of posts">
+              <div class="mycard m-4">
+                <div class="cardheader mt-2">
+                  <p class="left">
+                      <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/20/000000/external-like-instagram-flatart-icons-outline-flatarticons.png"/>
+                      {{post.voteCount}}
+                  </p>
+                  <h3 >{{post.postName}}</h3>
+                </div>
+                <div class="cardbody">
+                  <div class="desc">
+                   <!-- {{post.description}} -->
+                   <p class="overflow" [innerHTML]="post.description">{{post.description}}...</p>
+                  </div>
+                </div>
+                 <div class="cardFooter">
+                   <a type="button" class="nav-link" (click)="upvotePost(post.postId)">
+                     <img class="likes" src="https://img.icons8.com/ios-filled/30/000000/facebook-like.png"/><br>
+                    </a>
+                    <a type="button" class="nav-link" (click)="upvotePost(post.postId)">
+                      <img class="likes" src="https://img.icons8.com/external-basicons-solid-edtgraphics/30/000000/external-Dislike-marketing-basicons-solid-edtgraphics.png"/>
+                    </a>
+                    <button class="buy m-4">View Post</button>
+                </div>
+              </div>
+            <!-- <ul class="post-grid" ng-show="blog.isSelected('blog')">
+              <li ng-repeat="post in blog.posts" class="col-s-4" ng-click="blog.selectTab($index)">
+                <a type="button" class="nav-link" (click)="upvotePost(post.postId)">
+                  <img class="likes" src="https://img.icons8.com/ios-filled/30/000000/facebook-like.png"/><br>
+                </a>
+                <a type="button" (click)="viewPost(post.postId)" class="desc" style="text-decoration: none; color:black;">
+                <h3>{{post.postName}}</h3>
+                <p class="overflow" [innerHTML]="post.description">{{post.description}}...</p>
+              </a>
+                <p class="">
+                    <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/20/000000/external-like-instagram-flatart-icons-outline-flatarticons.png"/>
+                    {{post.voteCount}}
+                </p>
+                <cite class="bold">by {{name}} <p class="bold">posted on {{post.localDateTime.substring(0,10)}} at
+                    {{post.localDateTime.substring(11,19)}} </p>
+                </cite>
+                <br>
+                <a type="button" class="nav-link" (click)="upvotePost(post.postId)">
+                  <img class="likes" src="https://img.icons8.com/external-basicons-solid-edtgraphics/30/000000/external-Dislike-marketing-basicons-solid-edtgraphics.png"/>
+                </a>
+              </li>
+            </ul> -->
+
+            <!-- <div class="post" ng-repeat="post in blog.posts" ng-show="blog.isSelected($index)"> -->
+              <!-- <div>
+
+                <h2>{{post.postName}}</h2>
+                <cite class="bold">by {{name}} <p class="bold">posted on {{post.localDateTime.substring(0,10)}} at
+                    {{post.localDateTime.substring(11,19)}} </p>
+                </cite>
+                <div class="post-body">
+                  <p ng-repeat="paragraph in post.body" [innerHTML]="post.description">
+                    {{post.description}}
+                  </p>
+                </div>
+            </div> -->
+                <!-- <div class="comments" ng-controller="CommentController as commentCtrl">
+                  <button class="fa fa-heart" ng-click="post.likes = post.likes+1"> {{post.likes}}</button>
+                  <h3>Comments</h3>
+                  <ul>
+                    <li ng-repeat="comment in post.comments">
+                      "{{comment.body}}"
+                      <cite>- <b>{{comment.author}}</b></cite>
+                    </li>
+                  </ul>
+                  <form name="commentForm" ng-submit="commentForm.$valid && commentCtrl.addComment(post)" novalidate>
+
+                    <h4>Add Comment</h4>
+                    <textarea ng-model="commentCtrl.comment.body" cols="30" rows="10" required></textarea>
+                    <label for="">by:</label>
+                    <input type="text" ng-model="commentCtrl.comment.author" required placeholder="Name" />
+
+                    <input type="submit" value="Submit" />
+                  </form>
+                </div> -->
+              <!-- </div> -->
+            </div>
+            <!-- <div class="post" ng-show="blog.isSelected('new')">
+              <h2>Add New Post</h2>
+
+              <form name="postForm" ng-submit=" blog.addPost()" novalidate>
+                <h4>Title</h4>
+                <input type="text" ng-model="blog.post.title" />
+                <h4>Body</h4>
+                <textarea ng-model="blog.post.body" ng-list="/\n/" rows="10"></textarea>
+                <label for="">Featured Image URL</label>
+                <input type="text" ng-model="blog.post.image" placeholder="http://placekitten.com/g/2000/600" />
+                <label for="">by:</label>
+                <input type="text" ng-model="blog.post.author" placeholder="Author Name" required />
+
+                <input type="submit" value="Submit" />
+              </form>
+
+            </div> -->
+
+          </div>
+        </div>
+
+      </div>
+
+  </body>
+</section>
+<app-footer></app-footer>
