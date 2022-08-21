@@ -21,6 +21,7 @@ const routes: Routes = [
   {path: 'student', component: StudHomePageComponent},
   {path: 'sign-up', component: SignupComponent },
   {path: 'login', component: LoginComponent },
+  {path: '', component: LoginComponent },
   {path: 'create-post', component: CreatePostComponent, canActivate: [AuthGuard]},
   {path: 'create-subpost', component: CreateSubpostComponent, canActivate: [AuthGuard]},
   {path: 'list-subposts', component: ListSubpostsComponent},
