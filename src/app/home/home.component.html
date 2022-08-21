@@ -1,18 +1,123 @@
-<div class="post-body">
-  <div class="container">
-    <div class="row">
-      <hr />
-      <div class="col-md-9">
-        <!-- <app-post-tile [posts]="posts"></app-post-tile> -->
-        <div *ngFor="let post of posts">
-          <h1>{{post.postName}}</h1>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <app-side-bar></app-side-bar>
-        <app-subpost-side-bar></app-subpost-side-bar>
-      </div>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand navtext">
+      <img src="../../assets/IIIT_Bangalore_Logo.svg" alt="" width="60"  class="d-inline-block align-text-top">
+      IIITB CMS</a>
+    <ul class="nav justify-content-end d-flex" id="myNav">
+      <li class="nav-item">
+        <!-- <a class="nav-link mybutton text m-1" href="#" (click)="register()">Login</a> -->
+        <login-modal></login-modal>
+      </li>
+      <li class="nav-item">
+        <!-- <a class="nav-link mybutton text m-1" href="#" (click)="signup()">Signup</a> -->
+        <signup-modal></signup-modal>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- Navbar -->
+
+<!-- Banner -->
+<div class="banner">
+  <div class="halfcontainer">
+    <img src="../../assets/banner.svg" alt="banner" class="mt-5"/>
+  </div>
+  <div class="halfcontainer" style="position: relative; top: 50px; align-items: center;">
+    <div class="white mb-4">
+      Be the <span class="yellow">Change</span> You Wish To See
+    </div>
+    <div class="yellowline mb-4"></div>
+    <div class="white mb-5 smaller">
+      Disrupt your industry. Power your startup. Rationalize and control
+      your business.
     </div>
   </div>
 </div>
-  
+<!-- Banner -->
+
+<!-- Cards -->
+<div class=" m-5 mycontainer myflex ">
+  <div class="cards myflex ">
+    <div class="card m-5">
+      <div className="halfcontainer">
+        <img src="../../assets/banner.svg" alt="banner" className="cardImage" width="100%"/>
+      </div>
+      <div className="imagecontainer mt-3">
+        <div className="yellow text">
+          <span className="headingtext">
+            You have the power to bring happiness.
+          </span>
+          <p className="mt-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi repellat, inventore qui quis corporis delectus, perspiciatis ipsa quasi impedit distinctio sint velit veritatis nulla optio! Quasi facilis expedita excepturi optio?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card m-5">
+      <div className="imagecontainer mt-3">
+        <div className="yellow text">
+          <span className="headingtext">
+            You have the power to bring happiness.
+          </span>
+          <p className="mt-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi repellat, inventore qui quis corporis delectus, perspiciatis ipsa quasi impedit distinctio sint velit veritatis nulla optio! Quasi facilis expedita excepturi optio?
+          </p>
+        </div>
+      </div>
+      <div className="halfcontainer">
+        <img src="../../assets/filing.svg" alt="banner" className="cardImage" width="100%"/>
+      </div>
+    </div>
+
+    <div class="card m-5">
+      <div className="halfcontainer">
+        <img src="../../assets/group.svg" alt="banner" className="cardImage" width="100%"/>
+      </div>
+      <div className="imagecontainer mt-3">
+        <div className="yellow text">
+          <span className="headingtext">
+            You have the power to bring happiness.
+          </span>
+          <p className="mt-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi repellat, inventore qui quis corporis delectus, perspiciatis ipsa quasi impedit distinctio sint velit veritatis nulla optio! Quasi facilis expedita excepturi optio?
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+<app-footer></app-footer>
+<!-- Cards -->
+
+<!-- Register/Login -->
+<!-- <div class=" m-5 mycontainer myflex ">
+  <div class=" registerCards myflex">
+    <div class="m-5 border">
+      <div className="halfcontainer">
+        <img src="../../assets/login.svg" alt="banner" className="cardImage" width="100%"/>
+      </div>
+      <div className="imagecontainer mt-3">
+        <div className="yellow text">
+          <button class="mybutton">Login</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="m-5 border">
+      <div className="halfcontainer">
+        <img src="../../assets/signup.svg" alt="banner" className="cardImage" width="100%"/>
+      </div>
+      <div className="imagecontainer mt-3">
+        <div className="yellow text">
+          <button class="mybutton">Register</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- Register/Login -->
+
