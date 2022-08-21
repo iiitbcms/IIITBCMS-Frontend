@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { SubpostModel } from 'app/subpost/subpost-response';
 import { SubpostService } from 'app/subpost/subpost.service';
+import { LocalStorageService } from 'ngx-webstorage';
 import { AdminOpsService } from '../admin-ops.service';
 
 @Component({
@@ -11,15 +13,23 @@ import { AdminOpsService } from '../admin-ops.service';
 })
 export class AdminHomePageComponent implements OnInit {
 
-  constructor(private adminOpsService: AdminOpsService, private subpostService: SubpostService) { }
+  constructor(private adminOpsService: AdminOpsService, private subpostService: SubpostService
+    ,private localStorage:LocalStorageService,private router: Router) { }
 
   subpost:SubpostModel = new SubpostModel;
   subposts:SubpostModel[] = [];
   addTopicFormDisplay:boolean = false;
   dataLoaded:boolean = false;
+  role : string = "";
 
   async ngOnInit(): Promise<void> 
   {
+    this.role = this.localStorage.retrieve("role")
+    if (this.role != 'admin')
+    {
+      localStorage.clear();
+      this.router.navigateByUrl('login');
+    }
     const data : any = await this.subpostService.getAllSubposts().toPromise();
     console.log("subposts are ", data);
     this.subposts = data;

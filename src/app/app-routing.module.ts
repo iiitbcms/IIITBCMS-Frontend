@@ -14,21 +14,23 @@ import { CommHomePageComponent } from './home/comm-home-page/comm-home-page.comp
 import { AdminHomePageComponent } from './home/admin-home-page/admin-home-page.component';
 import { PostTileComponent } from './shared/post-tile/post-tile.component';
 import { ViewPostComponent } from './view-post/view-post.component';
+import { PostViewComponent } from './post-view/post-view.component';
 // PostTileComponent ViewPostComponent
 const routes: Routes = [
   {path: '', component: HomeComponent},
   // {path: 'student', component: StudHomePageComponent},
   {path: 'sign-up', component: SignupComponent },
   {path: 'login', component: LoginComponent },
+  {path: '', component: LoginComponent },
   {path: 'create-post', component: CreatePostComponent, canActivate: [AuthGuard]},
   {path: 'create-subpost', component: CreateSubpostComponent, canActivate: [AuthGuard]},
   {path: 'list-subposts', component: ListSubpostsComponent},
-  {path: 'view-post/:id', component: ViewPostComponent},
+  // {path: 'view-post/:id', component: ViewPostComponent},
   {path: 'profile', component: UserProfileComponent, canActivate: [AuthGuard]},
   {path: 'studHome', component: StudHomePageComponent, canActivate: [AuthGuard]},
   {path: 'commHome', component: CommHomePageComponent, canActivate: [AuthGuard]},
   {path: 'adminHome', component: AdminHomePageComponent, canActivate: [AuthGuard]},
-  {path: 'view-post', component: ViewPostComponent, canActivate: [AuthGuard]}
+  {path: 'view-post', component: PostViewComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({
