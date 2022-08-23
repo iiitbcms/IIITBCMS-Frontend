@@ -11,7 +11,7 @@ import { LocalStorageService } from 'ngx-webstorage';
 })
 export class HeaderComponent implements OnInit {
 
-   
+
   faUser = faUser;
   rollNo: string;
   isLoggedIn: boolean;
@@ -77,7 +77,7 @@ export class HeaderComponent implements OnInit {
     this.authService.logout();
     this.isLoggedIn = false;
     localStorage.clear();
-    window.location.href = "login";
+    window.location.href = "";
   }
 
 }

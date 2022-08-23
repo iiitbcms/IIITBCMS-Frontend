@@ -147,11 +147,11 @@ h1 {
     align-items: center;
     justify-content: center;
   }
-  
+
   .flooper-btn:hover {
     border-radius: 0px;
   }
-  
+
   .flooper-btn::before {
     content: "";
     position: absolute;
@@ -165,13 +165,13 @@ h1 {
     background: black;
     transition: all 0.6s ease-in-out;
   }
-  
+
   .flooper-btn:hover:before {
     background: white;
     border-radius: 0px;
     transition: all 0.6s ease-in-out;
   }
-  
+
   .flooper-btn::after {
     content: "My Activity";
     position: absolute;
@@ -206,7 +206,7 @@ h1 {
     z-index: 10;
     transition: all 0.6s ease-in-out;
   }
-  
+
   .flooper-btn:hover::after {
     background-size: 20%;
     text-shadow: 1px 1px 0px white;
@@ -220,4 +220,34 @@ h1 {
       6px 6px 0px LawnGreen;
     transition: all 0.6s ease-in-out;
   }
-  
+
+  .profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image,.text{
+    flex:1
+  }
+
+  .text{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .heading,.smaller{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color:#1a64a8;
+  }
+
+  .smaller{
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+

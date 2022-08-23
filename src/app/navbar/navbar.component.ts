@@ -68,7 +68,7 @@ export class NavbarComponent implements OnInit {
   logout() {
     this.authService.logout();
     localStorage.clear();
-    window.location.href = "login";
+    window.location.href = "";
   }
 
 }

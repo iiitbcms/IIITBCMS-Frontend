@@ -14,7 +14,7 @@
           <input type="text" class="form-control" [formControlName]="'url'" style="margin-top: 5px" placeholder="URL">
 
           <select class="form-control" style="margin-top: 10px" [formControlName]="'subpostName'">
-            <option value="" selected disabled>Select Subpost</option>
+            <option value="" selected disabled>Select Committee</option>
             <option *ngFor="let subpost of subposts">{{subpost.name}}</option>
           </select>
 
@@ -34,7 +34,7 @@
                       <div class="container inside">
                         <div class="left">
                           <textarea class="comment" type="text" placeholder="Description ..."[formControlName]="'description'"></textarea>
-            
+
                         </div>
                       </div>
                     </div>
