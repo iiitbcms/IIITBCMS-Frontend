@@ -33,6 +33,9 @@ import { AdminHomePageComponent } from './home/admin-home-page/admin-home-page.c
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { PostViewComponent } from './post-view/post-view.component';
+import { LoginModalComponent } from './auth/login/login-modal/login-modal.component';
+import { SignupModal } from './auth/signup/signup-modal/signup-modal.component';
+import { FooterComponent } from './footer/footer.component';
 
 /** import { FooterComponent } from './footer/footer.component';
 import { SignupModal } from './auth/signup/signup-modal/signup-modal.component';
@@ -59,7 +62,9 @@ import { PostCardComponent } from './post-card/post-card.component'; */
     CommHomePageComponent,
     AdminHomePageComponent,
     NavbarComponent,
-
+    LoginModalComponent,
+    SignupModal,
+    FooterComponent,
     PostViewComponent,
 /**    FooterComponent,
     SignupModal,
@@ -78,7 +83,7 @@ import { PostCardComponent } from './post-card/post-card.component'; */
     EditorModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule
   ],
   providers: [
     AuthService,
