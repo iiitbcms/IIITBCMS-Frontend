@@ -28,9 +28,9 @@
             </div>
           </div>
         </div>
-  
+
       </div>
-  
+
       <div class="content">
         <div class="container">
           <div class="row">
@@ -44,9 +44,9 @@
                 <h3>{{post.postName}}</h3>
                 <p class="overflow" [innerHTML]="post.description">{{post.description}}...</p>
               </a>
-                <p class=""> 
+                <p class="">
                     <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/20/000000/external-like-instagram-flatart-icons-outline-flatarticons.png"/>
-                    {{post.voteCount}}  
+                    {{post.voteCount}}
                 </p>
                 <cite class="bold">by {{name}} <p class="bold">posted on {{post.localDateTime.substring(0,10)}} at
                     {{post.localDateTime.substring(11,19)}} </p>
@@ -58,10 +58,10 @@
                 </a>
               </li>
             </ul>
-        
-            <div class="post" ng-repeat="post in blog.posts" ng-show="blog.isSelected($index)">
+
+            <!-- <div class="post" ng-repeat="post in blog.posts" ng-show="blog.isSelected($index)"> -->
               <!-- <div>
-  
+
                 <h2>{{post.postName}}</h2>
                 <cite class="bold">by {{name}} <p class="bold">posted on {{post.localDateTime.substring(0,10)}} at
                     {{post.localDateTime.substring(11,19)}} </p>
@@ -82,20 +82,20 @@
                     </li>
                   </ul>
                   <form name="commentForm" ng-submit="commentForm.$valid && commentCtrl.addComment(post)" novalidate>
-  
+
                     <h4>Add Comment</h4>
                     <textarea ng-model="commentCtrl.comment.body" cols="30" rows="10" required></textarea>
                     <label for="">by:</label>
                     <input type="text" ng-model="commentCtrl.comment.author" required placeholder="Name" />
-  
+
                     <input type="submit" value="Submit" />
                   </form>
                 </div> -->
-              </div>
+              <!-- </div> -->
             </div>
             <!-- <div class="post" ng-show="blog.isSelected('new')">
               <h2>Add New Post</h2>
-  
+
               <form name="postForm" ng-submit=" blog.addPost()" novalidate>
                 <h4>Title</h4>
                 <input type="text" ng-model="blog.post.title" />
@@ -105,17 +105,17 @@
                 <input type="text" ng-model="blog.post.image" placeholder="http://placekitten.com/g/2000/600" />
                 <label for="">by:</label>
                 <input type="text" ng-model="blog.post.author" placeholder="Author Name" required />
-  
+
                 <input type="submit" value="Submit" />
               </form>
-  
+
             </div> -->
-  
+
           </div>
         </div>
-  
+
       </div>
     </div>
-  
+
   </body>
 </section>
