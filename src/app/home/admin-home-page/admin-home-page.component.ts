@@ -30,7 +30,7 @@ export class AdminHomePageComponent implements OnInit {
       localStorage.clear();
       this.router.navigateByUrl('login');
     }
-    const data : any = await this.subpostService.getAllSubposts().toPromise();
+    const data : any = await this.subpostService.getAllSubpostsForAdmin().toPromise();
     console.log("subposts are ", data);
     this.subposts = data;
     console.log("this. subposts after copying are ",this.subposts);
@@ -39,6 +39,12 @@ export class AdminHomePageComponent implements OnInit {
 
   public addTopic()
   {
+    this.role = this.localStorage.retrieve("role")
+    if (this.role != 'admin')
+    {
+      localStorage.clear();
+      this.router.navigateByUrl('login');
+    }
     console.log("addTopic called!")
     this.addTopicFormDisplay = true;
   }

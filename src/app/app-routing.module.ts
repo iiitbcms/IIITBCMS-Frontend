@@ -21,7 +21,6 @@ const routes: Routes = [
   {path: 'student', component: StudHomePageComponent},
   {path: 'sign-up', component: SignupComponent },
   {path: 'login', component: LoginComponent },
-  {path: '', component: LoginComponent },
   {path: 'create-post', component: CreatePostComponent, canActivate: [AuthGuard]},
   {path: 'create-subpost', component: CreateSubpostComponent, canActivate: [AuthGuard]},
   {path: 'list-subposts', component: ListSubpostsComponent},
@@ -30,7 +29,9 @@ const routes: Routes = [
   {path: 'studHome', component: StudHomePageComponent, canActivate: [AuthGuard]},
   {path: 'commHome', component: CommHomePageComponent, canActivate: [AuthGuard]},
   {path: 'adminHome', component: AdminHomePageComponent, canActivate: [AuthGuard]},
-  {path: 'view-post', component: PostViewComponent, canActivate: [AuthGuard]}
+  {path: 'view-post', component: PostViewComponent, canActivate: [AuthGuard]},
+  {path: '',  component: LoginComponent}
+
 ];
 
 @NgModule({
