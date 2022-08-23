@@ -23,6 +23,18 @@ export class SubpostService {
     return this.httpClient.get<Array<SubpostModel>>('http://localhost:8080/api/subpost',{headers:header,responseType:'json'});
   }
 
+  getAllSubpostsForAdmin() : Observable<Array<SubpostModel>>{
+
+    let token = localStorage.getItem("token");
+    let header = new HttpHeaders(
+      {
+        Authorization : "Bearer " + token
+      }
+   )
+    console.log("Fetching subposts using get method from service class");
+    return this.httpClient.get<Array<SubpostModel>>('http://localhost:8080/api/subpost/admin',{headers:header,responseType:'json'});
+  }
+
   createSubpost(subpostmodel: SubpostModel) {
 
     let token = localStorage.getItem("token");
