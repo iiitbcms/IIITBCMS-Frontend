@@ -1,4 +1,5 @@
-export class PostModel {
+export class PostModel 
+{
   postId: number | any;
   postName: string | any;
   url: string | any;
@@ -11,5 +12,5 @@ export class PostModel {
   upVote: boolean | any;
   downVote: boolean | any;
   localDateTime!: string;
-  userName!: string;
+  postedBy: string | any;
 }

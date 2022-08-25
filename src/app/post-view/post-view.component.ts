@@ -39,12 +39,13 @@ export class PostViewComponent implements OnInit {
   {
     var postId = this.localStorage.retrieve('postId');
     const data : any = await this.postService.getPost(postId).toPromise();
-    console.log("data obtained i.e. post is ",data);
 
     this.post = data;
+    this.post.postedBy = data.username;
+    console.log("data obtained i.e. post is ",this.post);
 
     this.getCommentsForPost();
-
+    
     this.postLoaded = true;
 
     // this.postService.getPost(postId).subscribe(
