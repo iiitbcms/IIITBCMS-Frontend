@@ -85,7 +85,7 @@ export class CreatePostComponent implements OnInit {
     {
       this.navigate = "adminHome";
     }
-    this.router.navigateByUrl(role);
+    this.router.navigateByUrl(this.navigate);
   }
 
 }

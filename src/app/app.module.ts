@@ -37,10 +37,10 @@ import { LoginModalComponent } from './auth/login/login-modal/login-modal.compon
 import { SignupModal } from './auth/signup/signup-modal/signup-modal.component';
 import { FooterComponent } from './footer/footer.component';
 
-/** import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './footer/footer.component';
 import { SignupModal } from './auth/signup/signup-modal/signup-modal.component';
 import { LoginModalComponent } from './auth/login/login-modal/login-modal.component';
-import { PostCardComponent } from './post-card/post-card.component'; */
+import { PostCardComponent } from './post-card/post-card.component'; 
 
 @NgModule({
   declarations: [
@@ -66,10 +66,10 @@ import { PostCardComponent } from './post-card/post-card.component'; */
     SignupModal,
     FooterComponent,
     PostViewComponent,
-/**    FooterComponent,
+    FooterComponent,
     SignupModal,
     LoginModalComponent,
-    PostCardComponent, */
+    PostCardComponent, 
   ],
   imports: [
     BrowserModule,
