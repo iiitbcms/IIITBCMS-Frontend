@@ -15,6 +15,7 @@ import { AdminHomePageComponent } from './home/admin-home-page/admin-home-page.c
 import { PostTileComponent } from './shared/post-tile/post-tile.component';
 import { ViewPostComponent } from './view-post/view-post.component';
 import { PostViewComponent } from './post-view/post-view.component';
+import { CommPostsComponent } from './home/comm-posts/comm-posts.component';
 // PostTileComponent ViewPostComponent
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -30,7 +31,9 @@ const routes: Routes = [
   {path: 'commHome', component: CommHomePageComponent, canActivate: [AuthGuard]},
   {path: 'adminHome', component: AdminHomePageComponent, canActivate: [AuthGuard]},
   {path: 'view-post', component: PostViewComponent, canActivate: [AuthGuard]},
+  {path: 'comm-post', component: CommPostsComponent, canActivate: [AuthGuard]},
   {path: '',  component: LoginComponent}
+
 
 ];
 

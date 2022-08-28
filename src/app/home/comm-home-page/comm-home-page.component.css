@@ -4,12 +4,18 @@
   justify-content: center;
   align-items: center;
   flex:1;
-  width:600px;
+  width:300px;
   /* overflow:hidden; */
   background-color: white;
   background: linear-gradient(to right bottom ,rgba(255,255,255,0.7), rgba(255,255,255,0.3));
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   border-radius: 2rem;
+}
+
+.contain{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .overflow
@@ -60,7 +66,6 @@
   background-color: #1a63a7;
   color: white;
   transition: 0.7s;
-
 }
 
 .buy:hover {
@@ -69,9 +74,14 @@
   color: #1a63a7;
 }
 
-.content{
-  border:solid;
+.name{
+  color:#1a63a7;
+  font-family: 'Roboto', sans-serif;
 }
+
+/* .content{
+  border:solid;
+} */
 
 .myrow{
   display:flex;
@@ -109,3 +119,4 @@
   font-size:3rem;
   text-align: center;
 }
+
