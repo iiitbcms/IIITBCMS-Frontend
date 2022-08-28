@@ -1,65 +1,49 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { AuthService } from 'app/auth/shared/auth.service';
 import { PostModel } from 'app/shared/post-model';
 import { PostService } from 'app/shared/post.service';
 import { VotePayload } from 'app/shared/vote-button/vote-payload';
 import { VoteType } from 'app/shared/vote-button/vote-type';
 import { VoteService } from 'app/shared/vote.service';
-import { SubpostService } from 'app/subpost/subpost.service';
 import { LocalStorageService } from 'ngx-webstorage';
 
 @Component({
-  selector: 'app-comm-home-page',
-  templateUrl: './comm-home-page.component.html',
-  styleUrls: ['./comm-home-page.component.css']
+  selector: 'app-comm-posts',
+  templateUrl: './comm-posts.component.html',
+  styleUrls: ['./comm-posts.component.css']
 })
-export class CommHomePageComponent implements OnInit {
+export class CommPostsComponent implements OnInit {
 
   @Input() post: PostModel | any;
 
   votePayload: VotePayload;
-  committees: any;
 
   constructor(private postService: PostService,private localStorage:LocalStorageService,
-    private voteService: VoteService,private subpostService: SubpostService,private authService: AuthService) {
-    this.votePayload = {
+    private voteService: VoteService,) { this.votePayload = {
       voteType: undefined,
       postId: undefined,
-      userEmail : ""
+      userEmail : "" }
     }
-  }
 
   navigate : string = "";
   role : string = "";
   posts: PostModel[] | any;
   name : string = ""
+  id=0;
   post_id : number = -1;
-
 
   async ngOnInit(): Promise<void>
   {
+    this.name = this.localStorage.retrieve('name');
+    this.role = this.localStorage.retrieve("role");
+    this.id = this.localStorage.retrieve("id");
+    // const res : any = await this.postService.getAllPostsByComm(this.id).toPromise();
     const res : any = await this.postService.getAllPosts().toPromise();
     this.posts = res;
-    console.log("posts", this.posts);
-    this.name = this.localStorage.retrieve('name');
-    this.role = this.localStorage.retrieve("role")
     console.log(res);
     this.post_id = res[0].postId;
     console.log(this.post_id);
     this.refreshRole();
-    this.loadComms();
   }
-
-  loadComms(){
-    this.authService.getDropDown().subscribe(data =>{
-      this.committees = [...data];
-    });
-    console.log("committee", this.committees);
-  }
-
-  // storeId(id : number){
-  //   this.localStorage.store('id', id);
-  // }
 
   refreshRole()
   {
@@ -79,8 +63,15 @@ export class CommHomePageComponent implements OnInit {
   }
 
 
-  upvotePost(postId:any) {
+  upvotePost(postId:any)
+  {
     this.votePayload.voteType = VoteType.UPVOTE;
+    this.vote(postId);
+  }
+
+  downvotePost(postId:any)
+  {
+    this.votePayload.voteType = VoteType.DOWNVOTE;
     this.vote(postId);
   }
 
@@ -89,9 +80,14 @@ export class CommHomePageComponent implements OnInit {
     this.votePayload.postId = postId;
     this.votePayload.userEmail = this.localStorage.retrieve("email");
     console.log("vote type is ",this.votePayload);
-    this.voteService.vote(this.votePayload).subscribe(() => {
-      this.updateVoteDetails();
-    }, error => {
+    console.log("post id is ",postId);
+    this.voteService.vote(this.votePayload).subscribe(() =>
+    {
+      // this.updateVoteDetails();
+      this.ngOnInit();
+    },
+    error =>
+    {
       alert("could not vote");
     });
   }
@@ -114,11 +110,8 @@ export class CommHomePageComponent implements OnInit {
       window.location.href = this.navigate;
     else if(value==2)
       window.location.href = "create-post";
-    else if(value==3)
-    {
-      this.localStorage.store('id', 1);
-      window.location.href = "comm-post";
-    }
+
 
   }
+
 }

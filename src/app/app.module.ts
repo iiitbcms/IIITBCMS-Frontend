@@ -33,14 +33,12 @@ import { AdminHomePageComponent } from './home/admin-home-page/admin-home-page.c
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { PostViewComponent } from './post-view/post-view.component';
-import { LoginModalComponent } from './auth/login/login-modal/login-modal.component';
-import { SignupModal } from './auth/signup/signup-modal/signup-modal.component';
-import { FooterComponent } from './footer/footer.component';
 
 import { FooterComponent } from './footer/footer.component';
 import { SignupModal } from './auth/signup/signup-modal/signup-modal.component';
 import { LoginModalComponent } from './auth/login/login-modal/login-modal.component';
-import { PostCardComponent } from './post-card/post-card.component'; 
+import { PostCardComponent } from './post-card/post-card.component';
+import { CommPostsComponent } from './home/comm-posts/comm-posts.component';
 
 @NgModule({
   declarations: [
@@ -66,10 +64,8 @@ import { PostCardComponent } from './post-card/post-card.component';
     SignupModal,
     FooterComponent,
     PostViewComponent,
-    FooterComponent,
-    SignupModal,
-    LoginModalComponent,
-    PostCardComponent, 
+    PostCardComponent,
+    CommPostsComponent,
   ],
   imports: [
     BrowserModule,

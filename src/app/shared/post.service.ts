@@ -22,6 +22,20 @@ export class PostService {
     return this.httpClient.get<Array<PostModel>>('http://localhost:8080/api/posts/',{headers:header,responseType:'json'});
   }
 
+  getAllPostsByComm( id: number): Observable<Array<PostModel>> {
+
+    console.log("id", id);
+    let token = localStorage.getItem("token");
+    let header = new HttpHeaders(
+      {
+        Authorization : "Bearer " + token
+      }
+   )
+    return this.httpClient.get<Array<PostModel>>('http://localhost:8080/api/posts/by-subpost/' + id,{headers:header,responseType:'json'});
+  }
+
+
+
   createPost(postPayload: CreatePostPayload): Observable<any> {
     let token = localStorage.getItem("token");
     let header = new HttpHeaders(
