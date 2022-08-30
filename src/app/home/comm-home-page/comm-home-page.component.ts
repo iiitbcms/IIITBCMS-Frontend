@@ -121,4 +121,10 @@ export class CommHomePageComponent implements OnInit {
     }
 
   }
+
+  logout() {
+    this.authService.logout();
+    localStorage.clear();
+    window.location.href = "";
+  }
 }

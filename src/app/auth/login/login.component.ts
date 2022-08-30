@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
     this.loginRequestPayload.email = this.loginForm.get('email').value;
     this.loginRequestPayload.password = this.loginForm.get('password').value;
     // const res = await this.authService.login(this.loginRequestPayload).toPromise();
-    this.authService.login(this.loginRequestPayload).subscribe((data: any) => 
+    this.authService.login(this.loginRequestPayload).subscribe((data: any) =>
     {
       if(data) {
         this.isError = false;
