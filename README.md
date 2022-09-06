@@ -41,4 +41,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ***
 # For IIITBSoC
 Queries welcome at [akshath.kaushal@iiitb.ac.in](mailto:akshath.kaushal@iiitb.ac.in)    
-Check the back end repository [here](https://github.com/akshathkaushal/IIITB-CMS-Backend)
+Check the back end repository [here](https://github.com/iiitbcms/IIITBCMS-Backend)
